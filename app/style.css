@@ -1,0 +1,13 @@
+body{
+    max-width: 960px;
+    margin: auto;
+    background: #000;
+}
+#songs-list{
+    text-align: center;
+    color: antiquewhite;
+
+}
+.container{
+    display: flex;
+}

@@ -10,7 +10,9 @@ let _subscribers = {
 }
 
 function setState(prop, data) {
+  //updates the information in the state
   _state[prop] = data
+  //after updating a property in the state, then envoke all the functions that are subscribed to that property
   _subscribers[prop].forEach(fn => fn())
 }
 
@@ -26,6 +28,7 @@ class ItunesService {
     $.getJSON(url)
       .then(res => {
         let results = res.results.map(s => new Song(s))
+        //results is an array of song instances
         setState('songs', results)
       })
       .catch(err => console.log(err))
