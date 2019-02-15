@@ -7,7 +7,7 @@ body{
     display: flex column;
     text-align: center;
     color: black;
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 .container{
     display: flex;
