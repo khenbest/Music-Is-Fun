@@ -4,9 +4,10 @@ body{
     background: #000;
 }
 #songs-list{
+    display: flex column;
     text-align: center;
-    color: antiquewhite;
-
+    color: black;
+    margin-top: 10vh;
 }
 .container{
     display: flex;
