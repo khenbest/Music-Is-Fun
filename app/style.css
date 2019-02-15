@@ -1,7 +1,7 @@
 body{
     max-width: 960px;
     margin: auto;
-    background: #000;
+    background: black;
 }
 #songs-list{
     display: flex column;
