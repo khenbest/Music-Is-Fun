@@ -4,12 +4,37 @@ const itunesService = new ItunesService()
 
 function drawSongs() {
   //changes button back to GET MUSIC once songs are loaded
-  return getSongs
+  let songs = itunesService.Songs
+  let template = ''
+  songs.forEach(song => {
+    template +=
+      `<div class="col-12">
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-12 col-lg-4 bg-dark">
+            <img class="song-img" src=${song.albumArt}></img>
+        </div>
+            <div class="col-12 col-lg-8 bg-dark">
+              <div class="card-body">
+              <h2 class="card-title">${song.title}</h2>
+              <h3 class="card-text">${song.artist}</h3>
+              <h4>${song.collection}</h4>
+              <h6>${song.price}</h6>
+              <audio controls src=${song.preview}></audio>
+              </div>
+            </div>
+          </div>
+      </div> 
+      </div> 
+      `
+  });
+  document.querySelector('#songs-list').innerHTML = template
 
   document.querySelector('#get-music-button').textContent = 'GET MUSIC'
   console.log(itunesService.Songs)
   //step 2 finish this draw function
 }
+
 
 //PUBLIC
 class ItunesController {
