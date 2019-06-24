@@ -13,7 +13,7 @@ export default class Song {
       <div class="card mb-3">
         <div class="row no-gutters">
           <div class="col-12 col-lg-4 bg-dark">
-            <img class="song-img" src=${this.albumArt}></img>
+            <img class="song-img" onclick="app.controllers.itunesCtrl.playSong('${this.preview}')" src=${this.albumArt}></img>
         </div>
             <div class="col-12 col-lg-8 bg-dark">
               <div class="card-body">
@@ -21,7 +21,6 @@ export default class Song {
               <h3 class="card-text">${this.artist}</h3>
               <h4>${this.collection}</h4>
               <h6>${this.price}</h6>
-              <audio controls src=${this.preview}></audio>
               </div>
             </div>
           </div>

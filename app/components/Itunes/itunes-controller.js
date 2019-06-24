@@ -21,7 +21,11 @@ class ItunesController {
     itunesService.addSubscriber('songs', drawSongs)
   }
 
-
+  playSong(preview) {
+    let audioTag = document.getElementById("song-audio")
+    audioTag.setAttribute("src", preview)
+    audioTag.play()
+  }
   //DO NOT MODIFY THIS METHOD
   getMusic(e) {
     e.preventDefault();
